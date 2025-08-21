@@ -1,0 +1,43 @@
+{
+  "name": "Weekday×Hour – Stacked Area (Global Max)",
+  "organization": "serzethelupo",
+  "description": "ECharts stacked-area: 7 волн (Mo..Su) с общим максимумом по всем сериям.",
+  "supportUrl": "https://github.com/serzethelupo/looker-echarts",
+  "privacyPolicyUrl": "https://github.com/serzethelupo/looker-echarts",
+  "components": [
+    {
+      "id": "echarts-weekday-hour",
+      "name": "Weekday×Hour (ECharts)",
+      "description": "Stacked/overlapped area с глобальным Y max",
+      "resource": {
+        "js": [
+          "https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js",
+          "https://cdn.jsdelivr.net/gh/serzethelupo/looker-echarts@main/index.js"
+        ],
+        "css": []
+      },
+      "options": {
+        "showLegend": {
+          "type": "BOOLEAN",
+          "label": "Show legend",
+          "default": false
+        },
+        "stackSeries": {
+          "type": "BOOLEAN",
+          "label": "Stack series (on) / Overlap (off)",
+          "default": true
+        }
+      },
+      "fields": {
+        "dimensions": [
+          { "id": "weekday", "name": "Weekday", "type": "TEXT", "concept": "DIMENSION" },
+          { "id": "hour",    "name": "HourNum", "type": "NUMBER", "concept": "DIMENSION" }
+        ],
+        "metrics": [
+          { "id": "count", "name": "Record Count", "type": "NUMBER", "concept": "METRIC" }
+        ]
+      },
+      "minimumRequired": { "dimensions": 2, "metrics": 1 }
+    }
+  ]
+}
