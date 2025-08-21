@@ -12,7 +12,7 @@
       "resource": {
         "js": [
           "https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js",
-          "https://cdn.jsdelivr.net/gh/serzethelupo/looker-echarts@main/index.js"
+          "https://cdn.jsdelivr.net/gh/serzethelupo/looker-echarts-diagram@main/index.js"
         ],
         "css": []
       },
