@@ -1,48 +1,23 @@
 {
-  "name": "Weekday×Hour – Stacked Area",
+  "name": "LS Minimal Hello",
   "organization": "serzethelupo",
-  "description": "ECharts stacked area chart (Mo–Su × hours) with global max.",
-  "supportUrl": "https://github.com/serzethelupo/looker-echarts-diagram",
-  "privacyPolicyUrl": "https://github.com/serzethelupo/looker-echarts-diagram",
+  "description": "Minimal community viz to validate manifest loading.",
   "components": [
     {
-      "id": "echarts-weekday-hour",
-      "name": "Weekday×Hour",
-      "description": "Stacked/overlapped area chart",
+      "id": "hello-min",
+      "name": "Hello (Minimal)",
+      "description": "No libs, just text.",
       "resource": {
         "js": [
-          "https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js",
-          "https://cdn.jsdelivr.net/gh/serzethelupo/looker-echarts-diagram@main/index.js"
+          "https://raw.githubusercontent.com/serzethelupo/looker-echarts-diagram/main/index.min.js"
         ],
         "css": []
       },
-      "style": {
-        "showLegend": {
-          "id": "showLegend",
-          "label": "Show legend",
-          "type": "BOOLEAN",
-          "defaultValue": false
-        },
-        "stackSeries": {
-          "id": "stackSeries",
-          "label": "Stack series (on) / Overlap (off)",
-          "type": "BOOLEAN",
-          "defaultValue": true
-        }
-      },
       "fields": {
-        "dimensions": [
-          { "id": "weekday", "name": "Weekday", "type": "TEXT", "concept": "DIMENSION" },
-          { "id": "hour", "name": "HourNum", "type": "NUMBER", "concept": "DIMENSION" }
-        ],
-        "metrics": [
-          { "id": "count", "name": "Record Count", "type": "NUMBER", "concept": "METRIC" }
-        ]
+        "dimensions": [],
+        "metrics": []
       },
-      "minimumRequired": {
-        "dimensions": 2,
-        "metrics": 1
-      }
+      "minimumRequired": { "dimensions": 0, "metrics": 0 }
     }
   ]
 }
