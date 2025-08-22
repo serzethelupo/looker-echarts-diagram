@@ -1,14 +1,14 @@
 {
-  "name": "Weekday×Hour – Stacked Area (Global Max)",
+  "name": "Weekday×Hour – Stacked Area",
   "organization": "serzethelupo",
-  "description": "ECharts stacked-area: 7 волн (Mo..Su) с общим максимумом по всем сериям.",
-  "supportUrl": "https://github.com/serzethelupo/looker-echarts",
-  "privacyPolicyUrl": "https://github.com/serzethelupo/looker-echarts",
+  "description": "ECharts stacked area chart (Mo–Su × hours) with global max.",
+  "supportUrl": "https://github.com/serzethelupo/looker-echarts-diagram",
+  "privacyPolicyUrl": "https://github.com/serzethelupo/looker-echarts-diagram",
   "components": [
     {
       "id": "echarts-weekday-hour",
-      "name": "Weekday×Hour (ECharts)",
-      "description": "Stacked/overlapped area с глобальным Y max",
+      "name": "Weekday×Hour",
+      "description": "Stacked/overlapped area chart",
       "resource": {
         "js": [
           "https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js",
@@ -16,28 +16,33 @@
         ],
         "css": []
       },
-      "options": {
+      "style": {
         "showLegend": {
-          "type": "BOOLEAN",
+          "id": "showLegend",
           "label": "Show legend",
-          "default": false
+          "type": "BOOLEAN",
+          "defaultValue": false
         },
         "stackSeries": {
-          "type": "BOOLEAN",
+          "id": "stackSeries",
           "label": "Stack series (on) / Overlap (off)",
-          "default": true
+          "type": "BOOLEAN",
+          "defaultValue": true
         }
       },
       "fields": {
         "dimensions": [
           { "id": "weekday", "name": "Weekday", "type": "TEXT", "concept": "DIMENSION" },
-          { "id": "hour",    "name": "HourNum", "type": "NUMBER", "concept": "DIMENSION" }
+          { "id": "hour", "name": "HourNum", "type": "NUMBER", "concept": "DIMENSION" }
         ],
         "metrics": [
           { "id": "count", "name": "Record Count", "type": "NUMBER", "concept": "METRIC" }
         ]
       },
-      "minimumRequired": { "dimensions": 2, "metrics": 1 }
+      "minimumRequired": {
+        "dimensions": 2,
+        "metrics": 1
+      }
     }
   ]
 }
